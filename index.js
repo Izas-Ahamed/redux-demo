@@ -55,7 +55,7 @@ unsubscribe();
 store.dispatch(addWord());
 store.dispatch(addWord("hello folks!"));
 
-//async function handled by thunk which expect a callback function
+//async function handled by thunk which expects a callback function
 function fetchUsersFromAPI() {
   return function (dispatch) {
     dispatch(fetchUsers());
