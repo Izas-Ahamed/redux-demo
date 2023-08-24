@@ -10,7 +10,9 @@ function Users({ fetchUsers, users, loading, error }) {
   return (
     <div>
       {loading ? (
-        <p>Fetching Users.. ..</p>
+        <p>Fetching Users....</p>
+      ) : error.length > 0 ? (
+        <p>{error}</p>
       ) : (
         <>
           <p>From API:</p>
