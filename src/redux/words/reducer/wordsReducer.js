@@ -1,4 +1,4 @@
-import { ADD_WORD, REMOVE_WORD } from "./wordsActionTypes";
+import { ADD_WORD, REMOVE_WORD } from "../actions/wordsActionTypes";
 
 const initialWordsState = {
   words: [],
