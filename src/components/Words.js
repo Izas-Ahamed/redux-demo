@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { addWord, removeWord } from "../redux/words/wordsActionCreators";
+import {
+  addWord,
+  removeWord,
+} from "../redux/words/actions/wordsActionCreators";
 import { connect } from "react-redux";
 
 function Words({ allWords, addWord, removeWord }) {

@@ -11,7 +11,7 @@ export const wordsReducer = (state = initialWordsState, action) => {
     case REMOVE_WORD:
       return {
         ...state,
-        words: state.words.filter((word, index) => index != action.payload),
+        words: state.words.filter((word, index) => index !== action.payload),
       };
     default:
       return state;

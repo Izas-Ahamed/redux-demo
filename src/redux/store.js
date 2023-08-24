@@ -1,5 +1,5 @@
-import { createStore } from "redux";
-import { counterReducer } from "./counter/reducers/counterReducer";
+import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./rootReducer";
+import { logger } from "redux-logger";
 
-export default createStore(rootReducer);
+export default createStore(rootReducer, applyMiddleware(logger));
