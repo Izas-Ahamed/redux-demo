@@ -5,22 +5,21 @@ import {
   increamentValue,
 } from "../redux/counter/actions/counterActionCreators";
 
-function Counter({ count, increamentValue, decreamentValue }) {
+function Counter({ totalCount, increamentValue, decreamentValue }) {
   const [increamentInput, setIncreamentInput] = useState();
   const [decreamentInput, setDecreamentInput] = useState();
+
   return (
     <div>
-      <h1>Count : {count} </h1>
+      <h1>Count : {totalCount.count} </h1>
       <input
-        type="text"
-        value={increamentInput}
+        type="number"
         onChange={(e) => setIncreamentInput(e.target.value)}
       ></input>
       <button onClick={() => increamentValue(increamentInput)}>Add</button>
       <br />
       <input
-        type="text"
-        value={decreamentInput}
+        type="number"
         onChange={(e) => setDecreamentInput(e.target.value)}
       ></input>
       <button onClick={() => decreamentValue(decreamentInput)}>Subtract</button>
@@ -30,7 +29,7 @@ function Counter({ count, increamentValue, decreamentValue }) {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count,
+    totalCount: state.count,
   };
 };
 
