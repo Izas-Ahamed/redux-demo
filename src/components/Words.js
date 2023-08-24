@@ -5,7 +5,7 @@ import {
 } from "../redux/words/actions/wordsActionCreators";
 import { connect } from "react-redux";
 
-function Words({ allWords, addWord, removeWord }) {
+function Words({ words, addWord, removeWord }) {
   const [wordInput, setWordInput] = useState();
   return (
     <div>
@@ -17,7 +17,7 @@ function Words({ allWords, addWord, removeWord }) {
       ></input>
       <button onClick={() => addWord(wordInput)}>Add Word</button>
       <ul>
-        {allWords.words.map((word, index) => (
+        {words.map((word, index) => (
           <li key={index}>
             {word}
             <button onClick={() => removeWord(index)}>Delete</button>
@@ -30,7 +30,7 @@ function Words({ allWords, addWord, removeWord }) {
 
 const mapStateToProps = (state) => {
   return {
-    allWords: state.words,
+    words: state.words.words,
   };
 };
 
