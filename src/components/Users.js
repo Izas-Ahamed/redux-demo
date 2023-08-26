@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 function Users({ fetchUsers, users, loading, error }) {
   useEffect(() => {
     fetchUsers();
-  }, []);
+  }, [fetchUsers]);
 
   return (
     <div>

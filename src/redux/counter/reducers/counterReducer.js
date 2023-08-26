@@ -1,5 +1,5 @@
 import { INCREAMENT, DECREAMENT } from "../actions/counterActionTypes";
-
+import { produce } from "immer";
 const initialValueState = {
   count: 1,
 };
@@ -7,9 +7,13 @@ const initialValueState = {
 export const counterReducer = (state = initialValueState, action) => {
   switch (action.type) {
     case INCREAMENT:
-      return { ...state, count: state.count + parseInt(action.payload) };
+      return produce(state, (draft) => {
+        draft.count = draft.count + parseInt(action.payload);
+      });
     case DECREAMENT:
-      return { ...state, count: state.count - parseInt(action.payload) };
+      return produce(state, (draft) => {
+        draft.count = draft.count - parseInt(action.payload);
+      });
     default:
       return state;
   }
