@@ -9,11 +9,11 @@ export const counterReducer = (state = initialValueState, action) => {
   switch (action.type) {
     case INCREAMENT:
       return produce(state, (draft) => {
-        draft.count = draft.count + parseInt(action.payload);
+        draft.count = draft.count + action.payload;
       });
     case DECREAMENT:
       return produce(state, (draft) => {
-        draft.count = draft.count - parseInt(action.payload);
+        draft.count = draft.count - action.payload;
       });
     default:
       return state;
