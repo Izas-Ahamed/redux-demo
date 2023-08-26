@@ -4,6 +4,7 @@ const initialValueState = {
   count: 1,
 };
 
+//added immer demo
 export const counterReducer = (state = initialValueState, action) => {
   switch (action.type) {
     case INCREAMENT:
