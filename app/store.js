@@ -1,6 +1,6 @@
 const { configureStore } = require("@reduxjs/toolkit");
 const { counterReducer } = require("../features/counter/counterSlice");
-const { wordsReducer } = require("../features/words/wordsSlice");
+const { wordsReducer } = require("../features/words/wordSlice");
 const logger = require("redux-logger").default;
 const store = configureStore({
   reducer: {

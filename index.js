@@ -1,6 +1,6 @@
 const store = require("./app/store");
 const { counterActions } = require("./features/counter/counterSlice");
-const { wordsActions } = require("./features/words/wordsSlice");
+const { wordsActions } = require("./features/words/wordSlice");
 
 //creating listener passing callback function whenever state changes
 const unsubscribe = store.subscribe(() =>

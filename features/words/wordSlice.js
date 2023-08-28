@@ -4,7 +4,7 @@ const initialState = {
   words: [],
 };
 
-const wordsSlice = createSlice({
+const wordSlice = createSlice({
   name: "words",
   initialState,
   reducers: {
@@ -20,5 +20,5 @@ const wordsSlice = createSlice({
   },
 });
 
-exports.wordsReducer = wordsSlice.reducer;
-exports.wordsActions = wordsSlice.actions;
+exports.wordsReducer = wordSlice.reducer;
+exports.wordsActions = wordSlice.actions;
