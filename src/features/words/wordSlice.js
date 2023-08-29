@@ -17,8 +17,13 @@ const wordSlice = createSlice({
         return { payload };
       },
     },
+    removeWord: (state, action) => {
+      state.words = state.words.filter(
+        (word, index) => index != action.payload
+      );
+    },
   },
 });
 
 export default wordSlice.reducer;
-export const { addWord } = wordSlice.actions;
+export const { addWord, removeWord } = wordSlice.actions;
