@@ -3,6 +3,7 @@ import "./App.css";
 import store from "./app/store";
 import { Counter } from "./components/Counter";
 import { Words } from "./components/Words";
+import { Users } from "./components/Users";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Provider store={store}>
         <Counter />
         <Words />
+        <Users />
       </Provider>
     </div>
   );
