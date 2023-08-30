@@ -25,7 +25,7 @@ npm install
 ```
 then type
 ```sh
-nide index.js
+node index.js
 ```
 ---
 That's it 😀!
