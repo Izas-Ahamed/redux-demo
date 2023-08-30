@@ -16,6 +16,7 @@ Redux is a predictable state managment tool for JavaScript apps , here I have de
 
 - In redux folder we exporting root reducer which holds all the reducers and common store which imports root reducer and middlewares and import it into top root component which App.js here, then passing as prop and wrapping parent element with Provider component given by [React Redux](https://www.npmjs.com/package/react-redux).
 - In redux folder we separating reducers and its respective action creators and action types.
+- Middlewares used here are [Thunk](https://github.com/reduxjs/redux-thunk#installation-and-setup) for async actions and [Redux Logger](https://www.npmjs.com/package/redux-logger#install) for logging state changes.
 - Here I have used three reducers for the demo which are:
   - `counter` with increamenting and decreamenting exapmle actions that gets input from user or with default payload and makes increament or decreament the count.
   - `words` with addWord action example that takes input from user or with default payload and removeWord action that removes the word by filtering array.
